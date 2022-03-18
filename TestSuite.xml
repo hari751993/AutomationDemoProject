@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name = "All elements test">
+<test name = "Home page test">
+    <parameter name="select_value" value="bike"></parameter>
+    <classes>
+        <class name = "demoTest.HomePageTest">
+        </class>
+    </classes>
+</test>
+</suite>

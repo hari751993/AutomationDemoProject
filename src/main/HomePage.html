@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Automation demo project first page</title>
+</head>
+<body>
+<h1>Home page</h1>
+<div >
+</div>
+<select id="vehicles_dropdown" onselect="myFunction()">
+    <option value="car">car</option>
+    <option value="bike">bike</option>
+    <option value="scooter">scooter</option>
+</select>
+<button type="button" onclick="myFunction()" id="tryItButton">Try it</button>
+<p>
+<label id="demo"></label>
+</p>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("vehicles_dropdown").value;
+        document.getElementById("demo").innerHTML = x;
+    }
+</script>
+</body>
+</html>
