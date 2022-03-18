@@ -18,16 +18,16 @@ public class HomePageTest {
         start.initialization();
     }
 
-    @Test(testName = "Validate selected value in dropdown", priority = 1)
+    @Test(testName = "Validate dropdown selection", priority = 1)
     @Parameters({"select_value"})
     private void validateDropdown(String select_value) {
         Start.driver.get("file:///" + System.getProperty("user.dir") + "/src/main/HomePage.html");
         util.selectValueFromDropdown(homePageView.getVehicleDropdown(), select_value);
         util.clickElement(homePageView.getTryButton());
-        Assert.assertEquals(util.getText(homePageView.getPrintLabel()), select_value, "Selected value is not printed in UI!");
+        util.assertEquals(util.getText(homePageView.getPrintLabel()), "test", "Selected value is not printed in UI!");
     }
 
-    //@AfterSuite
+    @AfterSuite
     private void terminateTest() {
         start.termination();
     }

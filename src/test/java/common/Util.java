@@ -1,9 +1,16 @@
 package common;
 
 import common.Start;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+
+import java.io.File;
+import java.time.LocalDateTime;
 
 public class Util {
 
@@ -30,15 +37,32 @@ public class Util {
                 element = Start.driver.findElement(By.linkText(value));
                 break;
         }
-        return  element;
+        return element;
     }
 
-    public void selectValueFromDropdown(WebElement element, String selectvalue ) {
+    public void selectValueFromDropdown(WebElement element, String selectvalue) {
         Select select = new Select(element);
         select.selectByValue(selectvalue);
     }
 
-    public String getText(WebElement element ) {
+    public String getText(WebElement element) {
         return element.getText();
+    }
+
+    public void assertEquals(String expectedValue, String actualValue, String failureMessage){
+        if(!actualValue.equals(expectedValue))
+            takeSnapShot();
+        Assert.assertEquals(actualValue, expectedValue, failureMessage);
+    }
+    public void takeSnapShot() {
+        try {
+            String dateTimeNow = LocalDateTime.now().toString().replace(":","");
+            TakesScreenshot screenshot = ((TakesScreenshot) Start.driver);
+            File scrnFile = screenshot.getScreenshotAs(OutputType.FILE);
+            File destFile = new File("./src/main/resources/screenshots/" + dateTimeNow + ".png");
+            FileUtils.copyFile(scrnFile, destFile);
+        } catch (Exception e) {
+
+        }
     }
 }
