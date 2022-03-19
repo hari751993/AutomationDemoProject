@@ -1,15 +1,15 @@
 package demoTest;
 
-import common.*;
+import common.Start;
+import common.Util;
 import demoView.HomePageView;
-import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 import java.io.IOException;
 
 public class HomePageTest {
-    Start  start = new Start();
+    Start start = new Start();
     Util util = new Util();
     HomePageView homePageView = new HomePageView();
 
@@ -28,13 +28,13 @@ public class HomePageTest {
     }
 
     @AfterMethod
-    public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
+    private void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
         if (testResult.getStatus() == ITestResult.FAILURE) {
             util.takeSnapShot();
         }
     }
 
-    //@AfterSuite
+    @AfterSuite
     private void terminateTest() {
         start.termination();
     }

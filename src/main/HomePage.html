@@ -38,11 +38,11 @@
 <body>
 <ul>
     <li><a href="#home">Home</a></li>
-    <li><a href="#news">News</a></li>
+    <li><a href="#Register">Register</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#about">About</a></li>
 </ul>
-<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+<div id="home" style="margin-left:25%;padding:1px 16px;height:1000px;">
     <h1>Home page</h1>
     <h3>Dropdown test</h3>
     <select id="vehicles_dropdown" onselect="myFunction()">
@@ -55,14 +55,17 @@
         <label id="demo"></label>
     </p>
 </div>
-
+<div id="Register" style="margin-left:25%;padding:1px 16px;height:1000px;">
+    <h1>Registration page</h1>
+    <iframe id="regIframe" src="RegistrationPage.html" height="300" width="300" title="Registration iFrame" style="border:none;">
+    </iframe>
+</div>
 
 <script>
     function myFunction() {
-        var x = document.getElementById("vehicles_dropdown").value;
-        document.getElementById("demo").innerHTML = x;
+        var selectedVehicle = document.getElementById("vehicles_dropdown").value;
+        document.getElementById("demo").innerHTML = selectedVehicle;
     }
-
 </script>
 </body>
 </html>

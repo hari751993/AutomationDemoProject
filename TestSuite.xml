@@ -4,8 +4,8 @@
 <test name = "Home page test">
     <parameter name="select_value" value="bike"></parameter>
     <classes>
-        <class name = "demoTest.HomePageTest">
-        </class>
+        <class name = "demoTest.HomePageTest"/>
+        <class name = "demoTest.RegistrationPageTest"/>
     </classes>
 </test>
 </suite>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+<table>
+    <tr>
+        <td width="150">Name</td>
+        <td>
+            <input id="name" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>Age</td>
+        <td>
+            <input id="age" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>Address</td>
+        <td>
+            <input id="address" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>Nationality</td>
+        <td>
+            <input id="nationality" type="text">
+        </td>
+    </tr>
+</table>
+<p></p>
+<button type="Submit" onclick="myFunction()" id="submit">Register</button>
+<script>
+    function myFunction() {
+         var name = document.getElementById("name").value;
+         alert("Hi " + name +", Congrats! Now you are registered with us.");
+    }
+</script>
+</body>
+</body>
+</html>

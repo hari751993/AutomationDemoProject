@@ -1,6 +1,5 @@
 package common;
 
-import common.Start;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -49,12 +48,17 @@ public class Util {
         return element.getText();
     }
 
-    public void assertEquals(String expectedValue, String actualValue, String failureMessage){
+    public void sendText(WebElement element, String value) {
+        element.sendKeys(value);
+    }
+
+    public void assertEquals(String expectedValue, String actualValue, String failureMessage) {
         Assert.assertEquals(actualValue, expectedValue, failureMessage);
     }
+
     public void takeSnapShot() {
         try {
-            String dateTimeNow = LocalDateTime.now().toString().replace(":","");
+            String dateTimeNow = LocalDateTime.now().toString().replace(":", "");
             TakesScreenshot screenshot = ((TakesScreenshot) Start.driver);
             File scrnFile = screenshot.getScreenshotAs(OutputType.FILE);
             File destFile = new File("./src/main/resources/screenshots/" + dateTimeNow + ".png");
@@ -63,4 +67,15 @@ public class Util {
 
         }
     }
+
+    public void switchToIframe(WebElement element) {
+        Start.driver.switchTo().frame(element);
+    }
+
+    public String fetchAlertMessage() {
+        String message = Start.driver.switchTo().alert().getText();
+        Start.driver.switchTo().alert().accept();
+        return message;
+    }
+
 }
