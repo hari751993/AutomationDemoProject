@@ -50,8 +50,6 @@ public class Util {
     }
 
     public void assertEquals(String expectedValue, String actualValue, String failureMessage){
-        if(!actualValue.equals(expectedValue))
-            takeSnapShot();
         Assert.assertEquals(actualValue, expectedValue, failureMessage);
     }
     public void takeSnapShot() {
