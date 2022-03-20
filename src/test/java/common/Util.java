@@ -61,7 +61,7 @@ public class Util {
             String dateTimeNow = LocalDateTime.now().toString().replace(":", "");
             TakesScreenshot screenshot = ((TakesScreenshot) Start.driver);
             File scrnFile = screenshot.getScreenshotAs(OutputType.FILE);
-            File destFile = new File("./src/main/resources/screenshots/" + dateTimeNow + ".png");
+            File destFile = new File(" ./target/classes/screenshots/" + dateTimeNow + ".png");
             FileUtils.copyFile(scrnFile, destFile);
         } catch (Exception e) {
 
@@ -77,5 +77,4 @@ public class Util {
         Start.driver.switchTo().alert().accept();
         return message;
     }
-
 }

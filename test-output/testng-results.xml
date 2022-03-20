@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="All elements test" duration-ms="985" started-at="2022-03-19T23:46:27 IST" finished-at="2022-03-19T23:46:28 IST">
+    <groups>
+    </groups>
+    <test name="Home page test" duration-ms="985" started-at="2022-03-19T23:46:27 IST" finished-at="2022-03-19T23:46:28 IST">
+      <class name="demoTest.RegistrationPageTest">
+        <test-method status="PASS" signature="validateRegistration()[pri:0, instance:demoTest.RegistrationPageTest@32709393]" name="validateRegistration" duration-ms="558" started-at="2022-03-19T23:46:27 IST" finished-at="2022-03-19T23:46:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateRegistration -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:demoTest.RegistrationPageTest@32709393]" name="takeScreenShotOnFailure" is-config="true" duration-ms="8" started-at="2022-03-19T23:46:28 IST" finished-at="2022-03-19T23:46:28 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateRegistration status=SUCCESS method=RegistrationPageTest.validateRegistration()[pri:0, instance:demoTest.RegistrationPageTest@32709393] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+      </class> <!-- demoTest.RegistrationPageTest -->
+      <class name="demoTest.HomePageTest">
+        <test-method status="PASS" signature="webdriverInitialization()[pri:0, instance:demoTest.HomePageTest@578486a3]" name="webdriverInitialization" is-config="true" duration-ms="2935" started-at="2022-03-19T23:46:24 IST" finished-at="2022-03-19T23:46:27 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- webdriverInitialization -->
+        <test-method status="PASS" signature="validateDropdown(java.lang.String)[pri:1, instance:demoTest.HomePageTest@578486a3]" name="validateDropdown" duration-ms="357" started-at="2022-03-19T23:46:27 IST" finished-at="2022-03-19T23:46:27 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[bike]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDropdown -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:demoTest.HomePageTest@578486a3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2022-03-19T23:46:27 IST" finished-at="2022-03-19T23:46:27 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateDropdown status=SUCCESS method=HomePageTest.validateDropdown(java.lang.String)[pri:1, instance:demoTest.HomePageTest@578486a3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="terminateTest()[pri:0, instance:demoTest.HomePageTest@578486a3]" name="terminateTest" is-config="true" duration-ms="78" started-at="2022-03-19T23:46:28 IST" finished-at="2022-03-19T23:46:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- terminateTest -->
+      </class> <!-- demoTest.HomePageTest -->
+    </test> <!-- Home page test -->
+  </suite> <!-- All elements test -->
+</testng-results>

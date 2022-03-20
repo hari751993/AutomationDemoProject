@@ -2,6 +2,7 @@ package demoTest;
 
 import common.Start;
 import common.Util;
+import demoAction.AllureListener;
 import demoView.HomePageView;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
@@ -12,6 +13,7 @@ public class HomePageTest {
     Start start = new Start();
     Util util = new Util();
     HomePageView homePageView = new HomePageView();
+    AllureListener allureListener = new AllureListener();
 
     @BeforeSuite
     private void webdriverInitialization() {
@@ -31,6 +33,8 @@ public class HomePageTest {
     private void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
         if (testResult.getStatus() == ITestResult.FAILURE) {
             util.takeSnapShot();
+            allureListener.addScreenshotInAllureReport("Failure in home page");
+
         }
     }
 

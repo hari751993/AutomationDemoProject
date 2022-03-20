@@ -1,6 +1,7 @@
 package demoTest;
 
 import common.Util;
+import demoAction.AllureListener;
 import demoView.RegistrationPageView;
 import org.testng.Assert;
 import org.testng.ITestResult;
@@ -12,6 +13,7 @@ import java.io.IOException;
 public class RegistrationPageTest {
     Util util = new Util();
     RegistrationPageView regView = new RegistrationPageView();
+    AllureListener allureListener = new AllureListener();
 
     @Test
     private void validateRegistration() {
@@ -28,7 +30,7 @@ public class RegistrationPageTest {
     @AfterMethod
     private void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
         if (testResult.getStatus() == ITestResult.FAILURE) {
-            util.takeSnapShot();
+            allureListener.addScreenshotInAllureReport("Registration failure");
         }
     }
 }

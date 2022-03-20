@@ -7,7 +7,7 @@ public class Start {
     public static WebDriver driver;
 
     public void initialization() {
-        System.setProperty("webdriver.chrome.driver", "./src/main/resources/drivers/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "./target/classes/drivers/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
